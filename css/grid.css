@@ -1,0 +1,28 @@
+
+
+
+.container {
+  height: 100vh;
+  width: 95%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: minmax(90px, 100px) minmax(450px, auto) minmax(450px, auto);
+  grid-template-rows: 70px minmax(150px, auto) 100px;
+  grid-template-areas:
+    "header header header"
+    "nav main main"
+    "nav main main";
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
