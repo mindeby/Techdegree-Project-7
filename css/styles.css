@@ -1,5 +1,44 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/*Header styles*/
+header h1 {
+  font-weight: 100;
+  color: white;
+  font-size: 1.5em;
+  margin:0;
+  padding:1em;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+header strong {
+  font-weight: 800;
+}
+
+
+/*Nav styles*/
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  display: block;
+  margin: auto;
+  width: 70%;
+  padding: 1em;
+}
+
+/*Grid styles*/
 header {
   background-color: #7477bf;
+  position: relative;
 }
 
 nav {
