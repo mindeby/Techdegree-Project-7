@@ -122,13 +122,19 @@ nav li {
 .closebtn {
   cursor: pointer;
 }
-.widget-container{
+.widget-container, .social-media{
   display: flex;
 }
 
 .widgets {
   width: 50%;
   display: inline-block;
+}
+
+.media-box {
+  display: inline-block;
+  border: solid black 1px;
+  width: 33%;
 }
 
 /*Grid styles*/
