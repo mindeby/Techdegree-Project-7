@@ -25,7 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     options:{
       legend: {
         display: false,
+      },
+      layout: {
+        padding: {
+          bottom: 15,
+        }
       }
+
     }
 });
 
@@ -57,6 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       legend: {
         display: false,
+      },
+      layout: {
+        padding: {
+          bottom: 20,
+        }
       }
     }
 });
@@ -94,6 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
         position: 'right',
         labels: {
           fontColor: '#666666',
+        }
+      },
+      layout: {
+        padding: {
+          bottom: 20,
         }
       }
     }
