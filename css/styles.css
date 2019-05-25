@@ -16,7 +16,7 @@ header h1 {
   transform: translateY(-50%);
 }
 
-header strong {
+header strong, main strong {
   font-weight: 800;
 }
 
@@ -44,9 +44,23 @@ header ul li{
   overflow: auto;
 }
 
-
 header ul li:first-of-type{
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
 
+}
+
+
+
+header ul li:first-of-type:hover{
+  opacity: 1;
+  transform: scale(1.1) translate(-10px);
+}
+
+header ul li:first-of-type::after{
+  content: "•";
+  color: lightgreen;
+  display: inline-block;
 }
 
 header ul li:nth-last-of-type(2){
@@ -83,6 +97,40 @@ nav li {
   padding: 1em;
 }
 
+
+/*Main styles*/
+
+  #message {
+  background-color: #7477bf;
+  display: none;
+  font-size: 0.8em;
+  color: white;
+  font-weight: 100;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#message span {
+  background-color: #7477bf;
+  color: inherit;
+  border: none;
+  float:right;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.closebtn {
+  cursor: pointer;
+}
+.widget-container{
+  display: flex;
+}
+
+.widgets {
+  width: 50%;
+  display: inline-block;
+}
+
 /*Grid styles*/
 header {
   background-color: #7477bf;
@@ -94,5 +142,5 @@ nav {
 }
 
 main {
-  background-color: white;
+  background-color: lightgrey;
 }
