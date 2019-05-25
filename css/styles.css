@@ -133,6 +133,16 @@ nav li {
   cursor: pointer;
 }
 
+.selected-data h3, .widget-container h3, .social-stats h3 {
+  float: left;
+  margin-left: 20px;
+  text-transform:uppercase;
+  font-size: 1em;
+  color: #8d8d8d;
+}
+
+
+
 .selected-data ul {
   float:right;
   overflow: auto;
@@ -145,17 +155,49 @@ nav li {
   margin: auto;
 }
 
-.selected-data h3 {
-  margin-left: 0;
-  float: left;
-  margin-left: 10px;
-  text-transform:uppercase;
-  font-size: 1em;
+.selected-data button {
+    border: none;
+    text-decoration: none;
+    background: inherit;
+    color: #8d8d8d;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8em;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.widget-container, .social-media {
+button:hover,
+button:focus {
+    background: #81c98f;
+    border-radius: 6px;
+    color: white;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+.widget-container {
   border-top: solid rgba(224, 224, 224, .8) 1px;
   display: flex;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-stats {
+  border-top: solid rgba(224, 224, 224, .8) 1px;
 }
 
 .widgets {

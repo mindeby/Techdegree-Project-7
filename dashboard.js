@@ -57,15 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }]
     },
     options:{
-      title: {
-        display: true,
-        text:'DAILY TRAFFIC',
-      },
       legend: {
         display: false,
       },
       layout: {
         padding: {
+          top: 20,
           bottom: 20,
         }
       }
@@ -95,11 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }]
     },
     options: {
-      title: {
-        display: true,
-        text:'MOBILE USERS',
-        position: 'top',
-    },
       legend: {
         display:true,
         position: 'right',
@@ -109,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       layout: {
         padding: {
+          top:20,
           bottom: 20,
         }
       }
