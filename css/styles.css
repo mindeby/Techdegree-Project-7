@@ -20,14 +20,62 @@ header strong {
   font-weight: 800;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header ul {
+  display: flex;
+  float:right;
+  margin: auto;
+  overflow: auto;
+  height:100%;
+  vertical-align:middle;
+}
+
+
+header ul li{
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: auto;
+  overflow: auto;
+}
+
+
+header ul li:first-of-type{
+
+}
+
+header ul li:nth-last-of-type(2){
+border-left: black solid 0.3px;
+width:40%;
+}
+
+header ul li:last-of-type{
+  color: white;
+  font-weight: 200;
+}
+
+
+header img {
+  border-radius: 50%;
+  height: auto;
+  max-width: 60%;
+}
+
+
 
 /*Nav styles*/
-ul {
+
+nav ul {
   margin: 0;
   padding: 0;
 }
 
-li {
+nav li {
   list-style-type: none;
   display: block;
   margin: auto;
