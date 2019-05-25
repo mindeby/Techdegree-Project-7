@@ -5,14 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   var ctx1 = document.getElementById('myLineChart').getContext('2d');
 
   var chart1 = new Chart(ctx1, {
-    // The type of chart we want to create
     type: 'line',
 
-    // The data for our dataset
     data: {
         labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
         datasets: [{
-            label: 'TRAFFIC',
+            label: 'Weekly',
             backgroundColor: 'rgb(117, 119, 191, 0.5)',
             borderColor: 'rgb(76, 76, 114)',
             pointBackgroundColor: 'rgb(255, 255, 255)',
@@ -21,8 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
             borderWidth:1,
             lineTension:0,
             data: [750, 1250, 900, 1300, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
-        }]
+        },
+      ]
     },
+    options:{
+      legend: {
+        display: false,
+      }
+    }
 });
 
 //BAR CHART
@@ -36,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
         labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
-            label: 'DAILY TRAFFIC',
-            backgroundColor: 'rgb(117, 119, 191, 0.5)',
+            backgroundColor: 'rgb(117, 119, 191, 1)',
             borderColor: 'rgb(76, 76, 114)',
             pointBackgroundColor: 'rgb(255, 255, 255)',
             pointBorderColor: 'rgb(76, 76, 114)',
@@ -47,6 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
             data: [75, 100, 200, 175, 225, 200, 100],
         }]
     },
+    options:{
+      title: {
+        display: true,
+        text:'DAILY TRAFFIC',
+      },
+      legend: {
+        display: false,
+      }
+    }
 });
 
 //DONUT CHART
@@ -58,19 +70,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // The data for our dataset
     data: {
-        labels: ['Phones', 'Tablets', 'Desktop'],
-        datasets: [{
-            label: 'MOBILE USERS',
-            backgroundColor: 'rgb(117, 119, 191, 0.5)',
-            borderColor: 'rgb(76, 76, 114)',
+        labels: ['Phones','Tablets', 'Desktop'],
+        datasets: [
+          {
+            backgroundColor: ['#74b1bf','#81c98f','#7377bf'],
+            borderColor: '#74b1bf',
             pointBackgroundColor: 'rgb(255, 255, 255)',
             pointBorderColor: 'rgb(76, 76, 114)',
             pointRadius: 5,
             borderWidth:1,
             lineTension:0,
-            data: [15, 15, 70],
+            data: [15,15,70],
         }]
     },
+    options: {
+      title: {
+        display: true,
+        text:'MOBILE USERS',
+        position: 'top',
+    },
+      legend: {
+        display:true,
+        position: 'right',
+        labels: {
+          fontColor: '#666666',
+        }
+      }
+    }
 });
 
 
