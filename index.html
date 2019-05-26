@@ -8,8 +8,10 @@
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
   </head>
+
   <body body onload="alertMessage()">
     <div class="container">
+
       <header>
         <h1> <strong>Your</strong>App&trade;</h1>
         <ul>
@@ -22,10 +24,11 @@
           <li><h3>Jyn Erso</h3></li>
         </ul>
       </header>
+
       <nav>
         <ul>
           <li>
-            <a href="">
+            <a href="#dashboard">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
               <path d="M25 18c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zm1 12c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zm-7 4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zM28 0H6C3.8 0 2 1.8 2 4v24c0 2.2 1.8 4 4 4h22c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zm2 28c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V8h26v20zm0-22H4V4c0-1.1.9-2 2-2h22c1.1 0 2 .9 2 2v2zM17 18c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2h-2v-2zM9 26c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2H8v-2zm1-4c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm-1-4h2v2H8v-2z" fill="#fff"/>
               </svg>
@@ -53,22 +56,33 @@
             </a>
           </li>
         </ul>
-
       </nav>
 
       <main>
+        <div class="search_row">
+          <h3 id="dashboard">Dashboard</h3>
+          <div class="search_bar">
+            <input id="prompt" type="text" placeholder="Search">
+            <button id="search_btn">
+              <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.966 52.966">
+              <path d="M51.704 51.273L36.845 35.82c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491a.998.998 0 0 0 1.414.028 1 1 0 0 0 .028-1.414zM21.983 40c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z"/>
+              </svg>
+            </button>
+            <div class="results"></div>
+          </div>
+        </div>
 
         <div id="message">
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-          <strong>Alert</strong> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.
+          <strong>Alert</strong> Your credit card information expired please update your details until the next renovation on 20/06/2019.
         </div>
         <div class="selected-data">
           <h3>Traffic</h3>
           <ul>
-            <li><button>Hourly</button></li>
-            <li><button>Daily</button></li>
-            <li><button>Weekly</button></li>
-            <li><button>Monthly</button></li>
+            <li><button id="hourly">Hourly</button></li>
+            <li><button id="daily">Daily</button></li>
+            <li><button id="weekly">Weekly</button></li>
+            <li><button id="monthly">Monthly</button></li>
           </ul>
         </div>
         <div>
@@ -127,6 +141,63 @@
           </div>
 
         </div>
+
+        <div class="members_activity">
+          <div id="new_members">
+            <h3>New Members</h3>
+          </div>
+
+          <div id="recent_activity">
+
+          </div>
+        </div>
+
+
+        <div class="message_settings">
+          <div class="message_user">
+            <h3>Message User</h3>
+            <input id="user_search" type="text" placeholder="Search for User"><br></br>
+            <input id="user_message" type="textarea" placeholder="Message for User">
+          </div>
+
+          <div class="settings">
+            <h3>Settings</h3>
+            <div class="setting_1">
+              <label class="switch">
+                <p>Send Email Notifications</p>
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="setting_2">
+              <label class="switch">
+                <p>Set Profile to Public</p>
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="time_zones">
+            <select id="Timezone" name="user_timezone">
+              <option label="Select Timezone">Choose timezone</option>
+              <option>Central European Summer Time</option>
+              <option>Pacific Daylight Time</option>
+              <option>Coordinated Univeral Time</option>
+            </select>
+          </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
 
       </main>
     </div>

@@ -142,7 +142,62 @@ nav li {
   color: #8d8d8d;
 }
 
-.social-stats h3 {
+
+.search_row h3 {
+  height: 100%;
+  padding: 23px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  display: inline-block;
+  text-align: left;
+  font-size: 1em;
+  color: #8d8d8d;
+  width: 20%;
+  border-right: solid rgba(224, 224, 224, .8) 1px;
+  border-top: solid rgba(224, 224, 224, .8) 1px;
+}
+
+.search_bar {
+  background-color: #fbfbfb;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 0;
+  text-align: right;
+  border-bottom: solid rgba(224, 224, 224, .8) 1px;
+}
+
+#prompt {
+  color: rgba(251, 251, 251, .2);
+  font-weight: 200;
+  border: none;
+  padding-right: 0;
+  margin-right: 0;
+  border-bottom: solid rgba(224, 224, 224, .8) 1px;
+  border-left: solid rgba(224, 224, 224, .8) 1px;
+  border-top: solid rgba(224, 224, 224, .8) 1px;
+}
+
+ .search_bar button {
+  background-color: white;
+  margin: 0;
+  border-left: none;
+  border-bottom: solid rgba(224, 224, 224, .8) 1px;
+  border-right: solid rgba(224, 224, 224, .8) 1px;
+  border-top: solid rgba(224, 224, 224, .8) 1px;
+}
+
+ .search_bar button:hover, .search_bar button:focus {
+   background: #7477bf;
+   border-radius: 2px;
+   fill: white;
+ }
+
+
+
+.social-stats h3, .message_settings h3, #new_members h3 {
   margin-left: 20px;
   text-transform:uppercase;
   font-size: 1em;
@@ -150,6 +205,9 @@ nav li {
 }
 
 
+.message_user, .settings {
+  width: 50%;
+}
 
 .selected-data ul {
   float:right;
@@ -200,7 +258,7 @@ button:active {
   display: flex;
 }
 
-.social-media {
+.social-media, .search_row, .members_activity, .message_settings {
   display: flex;
 }
 
@@ -246,6 +304,102 @@ button:active {
   margin-right: 100px;
   margin-top: 10px;
 
+}
+
+
+.members_activity img {
+  border-radius: 50%;
+  text-align: left;
+  max-width: 15%;
+}
+
+
+#new_members, #recent_activity {
+  margin:auto;
+  display: inline-block;
+  max-width: 100%;
+  text-align: left;
+}
+
+#user_search, #user_message {
+  background-color: #fbfbfb;
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 0;
+  text-align: right;
+  border-bottom: solid rgba(224, 224, 224, .8) 1px;
+  border-radius: 5px;
+}
+
+ #user_message {
+  min-height: 150px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.setting_1, .setting_2{
+  display: block;
 }
 
 /*Grid styles*/
