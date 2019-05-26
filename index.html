@@ -10,7 +10,7 @@
   </head>
 
   <body body onload="alertMessage()">
-    <div class="container">
+    <div class="container clearfix">
 
       <header>
         <h1> <strong>Your</strong>App&trade;</h1>
@@ -86,7 +86,7 @@
           </ul>
         </div>
         <div>
-        <canvas id="myLineChart"></canvas>
+        <canvas id="myLineChart" width="400" height="100"></canvas>
         </div>
 
         <div class="widget-container">
@@ -145,10 +145,20 @@
         <div class="members_activity">
           <div id="new_members">
             <h3>New Members</h3>
+            <ul id="list_new_members"></ul>
+              <li><img src="images/member-1.jpg" alt="Ana George"></img>Ana George</br><a>anageorge@example.com</a><span>10/15/15</span></li>
+              <li><img src="images/member-2.jpg" alt="Rodrigo Carlos"></img>Rodrigo Carlos</br><a>rodrigocarlos@example.com</a><span>10/15/15</span></li>
+              <li><img src="images/member-3.jpg" alt="Susan Simpson"></img>Susan Simpson</br><a>susansimpson@example.com</a><span>10/15/15</span></li>
+              <li><img src="images/member-4.jpg" alt="John Blake"></img>John Blake</br><a>johnblake@example.com</a><span>10/15/15</span></li>
           </div>
 
           <div id="recent_activity">
-
+            <h3>Recent Activity</h3>
+            <ul id="list_recent_activity"></ul>
+              <li><img src="images/member-1.jpg" alt="Ana George"></img>Ana George commented on YourApps cooking tips</br>4 hours ago</li>
+              <li><img src="images/member-2.jpg" alt="Rodrigo Carlos"></img>Rodrigo Carlos liked the post about global warming being super real</br>5 hours ago</li>
+              <li><img src="images/member-3.jpg" alt="Susan Simpson">Susan Simpson comented on global warming being super real</br>5 hours ago</li>
+              <li><img src="images/member-4.jpg" alt="John Blake"></img>John Blake posted YourApps selfhelp tips</br>1 day ago</li>
           </div>
         </div>
 
@@ -158,45 +168,38 @@
             <h3>Message User</h3>
             <input id="user_search" type="text" placeholder="Search for User"><br></br>
             <input id="user_message" type="textarea" placeholder="Message for User">
+            <button id="send_btn">SEND</button>
           </div>
 
           <div class="settings">
             <h3>Settings</h3>
             <div class="setting_1">
+              <p>Send Email Notifications</p>
               <label class="switch">
-                <p>Send Email Notifications</p>
                 <input type="checkbox">
-                <span class="slider round"></span>
+                <span class="slider round">ON</span>
               </label>
             </div>
 
             <div class="setting_2">
+              <p>Set Profile to Public</p>
               <label class="switch">
-                <p>Set Profile to Public</p>
                 <input type="checkbox">
-                <span class="slider round"></span>
+                <span class="slider round">ON</span>
               </label>
             </div>
             <div class="time_zones">
             <select id="Timezone" name="user_timezone">
               <option label="Select Timezone">Choose timezone</option>
-              <option>Central European Summer Time</option>
-              <option>Pacific Daylight Time</option>
-              <option>Coordinated Univeral Time</option>
+              <option label="Central">CentralTime</option>
+              <option label="Eastern">Eastern Pacific</option>
+              <option label="Western">Western Time</option>
             </select>
-          </div>
+            </div>
+            <button id="save_btn">SAVE</button>
+            <button id="cancel_btn">CANCEL</button>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
 
 
       </main>

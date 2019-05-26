@@ -111,6 +111,9 @@ nav li {
 
 /*Main styles*/
 
+
+  /*Alert Message */
+
   #message {
   background-color: #7477bf;
   display: none;
@@ -134,14 +137,8 @@ nav li {
   cursor: pointer;
 }
 
-.selected-data h3, .widget-container h3 {
-  float: left;
-  margin-left: 20px;
-  text-transform:uppercase;
-  font-size: 1em;
-  color: #8d8d8d;
-}
 
+/* SEARCH BAR */
 
 .search_row h3 {
   height: 100%;
@@ -170,7 +167,7 @@ nav li {
 }
 
 #prompt {
-  color: rgba(251, 251, 251, .2);
+  color: black;
   font-weight: 200;
   border: none;
   padding-right: 0;
@@ -196,17 +193,14 @@ nav li {
  }
 
 
+/* TRAFFIC LINE CHART */
 
-.social-stats h3, .message_settings h3, #new_members h3 {
+.selected-data h3 {
+  float: left;
   margin-left: 20px;
   text-transform:uppercase;
   font-size: 1em;
   color: #8d8d8d;
-}
-
-
-.message_user, .settings {
-  width: 50%;
 }
 
 .selected-data ul {
@@ -236,27 +230,52 @@ nav li {
     -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+.selected-data button:hover,
+.selected-data button:focus {
     background: #81c98f;
     border-radius: 6px;
     color: white;
 }
 
-button:focus {
+.selected-data button:focus {
     outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
-button:active {
+.selected data button:active {
     transform: scale(0.99);
 }
 
+
+/* BAR & DOUGHNUT CHART */
+.widget-container h3 {
+  float: left;
+  margin-left: 20px;
+  text-transform:uppercase;
+  font-size: 1em;
+  color: #8d8d8d;
+}
 
 .widget-container {
   border-top: solid rgba(224, 224, 224, .8) 1px;
   display: flex;
 }
+
+.widgets {
+  width: 50%;
+  display: inline-block;
+}
+
+
+/* SOCIAL MEDIA */
+
+.social-stats h3, .message_settings h3, #new_members h3, #recent_activity h3{
+  margin-left: 20px;
+  text-transform:uppercase;
+  font-size: 1em;
+  color: #8d8d8d;
+}
+
 
 .social-media, .search_row, .members_activity, .message_settings {
   display: flex;
@@ -266,10 +285,6 @@ button:active {
   border-top: solid rgba(224, 224, 224, .8) 1px;
 }
 
-.widgets {
-  width: 50%;
-  display: inline-block;
-}
 
 .media-box {
   display: inline-block;
@@ -307,27 +322,80 @@ button:active {
 }
 
 
+/*MEMBERS */
+
+
 .members_activity img {
   border-radius: 50%;
   text-align: left;
   max-width: 15%;
 }
 
-
-#new_members, #recent_activity {
-  margin:auto;
-  display: inline-block;
-  max-width: 100%;
-  text-align: left;
+.members_activity li {
+  list-style-type: none;
+  display: block;
 }
 
-#user_search, #user_message {
+.new_members li {
+  margin-left: 10px;
+}
+
+.new_members li {
+  margin-left: 20px;
+}
+
+.new_members ul, .members_activity ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+.members_activity img {
+  border-radius: 50%;
+  text-align: left;
+  max-width: 15%;
+  padding: 5px;
+  display: inline-block;
+  margin: auto;
+}
+
+.members_activity a {
+  margin-left: 20px;
+  text-align: right;
+}
+
+.members_activity {
+  border-top: solid rgba(224, 224, 224, .8) 1px;
+}
+
+#new_members, #recent_activity {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+
+/* MESSAGES & SETTINGS */
+.message_settings {
+  border-top: solid rgba(224, 224, 224, .8) 1px;
+}
+
+.message_user, .settings {
+  width: 50%;
+  margin-left: 20px;
+}
+
+
+
+
+#user_search, #user_message, .time_zones {
   background-color: #fbfbfb;
   width: 100%;
   margin: auto;
   padding: 5px;
   margin-bottom: 0;
-  text-align: right;
   border-bottom: solid rgba(224, 224, 224, .8) 1px;
   border-radius: 5px;
 }
@@ -336,21 +404,83 @@ button:active {
   min-height: 150px;
 }
 
+
+#send_btn {
+  width: 100%;
+  background-color: #7577bf;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#save_btn {
+  width: 46%;
+  background-color: #7577bf;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 0px;
+  margin-right: 25px;
+}
+
+#cancel_btn {
+  width: 46%;
+  background-color: #cccccc;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.settings, #recent_activity {
+  border-left: solid rgba(224, 224, 224, .8) 1px;
+  padding-left: 25px;
+}
+
+.setting_1, .setting_2 {
+  display: flex;
+}
+
+.setting_2 {
+  margin-bottom: 15px;
+}
+
+.setting_1 p, .setting_2 p {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.setting_2 p {
+  margin-right: 30px;
+}
+
+.time_zones{
+  display: block;
+  margin-bottom: 10px;
+}
+
+  /*SLIDER*/
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 20px;
+  padding: 10px;
 }
 
-/* Hide default HTML checkbox */
+.switch span {
+  padding:5px;
+  color: white;
+}
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -376,7 +506,7 @@ button:active {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7577bf;
 }
 
 input:focus + .slider {
@@ -389,7 +519,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }

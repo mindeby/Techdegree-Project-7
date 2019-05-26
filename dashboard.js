@@ -26,6 +26,18 @@ var chart1_1 = new Chart(ctx1_1, {
     ]
   },
   options:{
+    scales: {
+            yAxes: [{
+                gridlines: {
+                    offsetGridLines:true,
+                }
+            }]
+        },
+    responsive:true,
+    maintainAspectRatio: false,
+    gridlines: {
+       offsetGridLines: true,
+   },
     legend: {
       display: false,
     },
@@ -33,8 +45,7 @@ var chart1_1 = new Chart(ctx1_1, {
       padding: {
         bottom: 15,
       }
-    }
-
+    },
   }
 });
 
@@ -254,7 +265,7 @@ document.getElementById("monthly").addEventListener("click", function(){
         padding: {
           top:20,
           bottom: 20,
-        }
+        },
       }
     }
 });
@@ -282,6 +293,13 @@ document.getElementById("search_btn").addEventListener("click", function(){
 });
 
 
+member_names =['Ana George',
+               'Rodrigo Carlos',
+               'Susan Simpson',
+               'John Blake'
+]
+
+/*
 var member = {
   avatar:"",
   name:"",
@@ -323,6 +341,7 @@ recent_activities = [' commented on YourApps cooking TIPS',
 
 ]
 
+
 allMembers =[];
 
 for (var i = 0; i <= member_names.length-1; i += 1 ) {
@@ -333,15 +352,10 @@ for (var i = 0; i <= member_names.length-1; i += 1 ) {
 console.log(allMembers);
 
 for (var i = 0; i <= member_names.length-1; i += 1 ) {
-document.getElementById('new_members').innerHTML += (allMembers[i].avatar) + ' ' + (allMembers[i].name)+ ' ' + (allMembers[i].email)+ ' ' + (allMembers[i].signUp);
-document.getElementById('recent_activity').innerHTML += (allMembers[i].name) + ' ' + (allMembers[i].activity) + '<br></br>';
+document.getElementById('list_new_members').innerHTML += '<li>' + (allMembers[i].avatar) + ' ' + (allMembers[i].name)+ '<br></br>' + (allMembers[i].email)+ ' ' + (allMembers[i].signUp) + '<li></li>';
+document.getElementById('list_recent_activity').innerHTML += '<li>' + (allMembers[i].name) + ' ' + (allMembers[i].activity) + '<li></li>' + '<br></br>';
 }
-
-
-
-
-
-
+*/
 
 
 
