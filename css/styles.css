@@ -59,7 +59,8 @@ header ul li{
 header ul li:first-of-type{
   opacity: 0.6;
   transition: all 0.3s ease-in-out;
-
+  float:right;
+  padding:10px;
 }
 
 
@@ -87,8 +88,11 @@ header ul li:last-of-type{
 
 
 header img {
+  float: right;
+  margin: auto;
   border-radius: 50%;
   height: auto;
+  max-width: 40%;
   /*max-width: 60%;*/
 }
 
@@ -103,9 +107,11 @@ nav ul {
 
 nav li {
   list-style-type: none;
-  display: block;
+  display: inline-block;
+  /*display: block;*/
   margin: auto;
-  width: 70%;
+  width: 23%;
+  /*width: 70%;*/
   padding: 1em;
 }
 
@@ -167,6 +173,7 @@ nav li {
   width: 80%;
   margin: auto;
   padding: 20px;
+  margin-top: 10px;
   margin-bottom: 0;
   text-align: right;
   border-bottom: solid rgba(224, 224, 224, .8) 1px;
@@ -215,6 +222,7 @@ nav li {
   float:right;
   overflow: auto;
   margin-right: 20px;
+  display: flex;
 }
 
 .selected-data li {
@@ -224,6 +232,7 @@ nav li {
 }
 
 .selected-data button {
+    display: inline-block;
     border: none;
     text-decoration: none;
     background: inherit;
@@ -299,8 +308,9 @@ nav li {
 .media-box {
   /*display: inline-block;*/
   border: solid rgba(224, 224, 224, .8) 1px;
-  width: 30%;
-  margin: 10px auto;
+  /*width: 30%;*/
+  margin: 10px;
+  /*margin: 10px auto;*/
   background-color: #fbfbfb;
   padding:10px;
 }
@@ -683,6 +693,8 @@ main {
 
    .media-box {
      display: inline-block;
+     width: 30%;
+     margin: 10px auto;
    }
 
    .members_activity img {
@@ -709,11 +721,29 @@ main {
 
   header img {
     max-width: 60%;
+    margin-top: auto;
+    margin-left: auto;
+    float: none;
   }
 
   #dashboard {
     display:inline-block;
   }
+
+  nav li {
+    display: block;
+    width: 70%;
+  }
+
+  .search_bar {
+    margin-top: 0;
+  }
+
+  header ul li:first-of-type{
+    float:none;
+    padding:auto;
+  }
+
 
 }
 
