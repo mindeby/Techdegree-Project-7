@@ -39,8 +39,8 @@ header strong, main strong {
 
 header ul {
   font-size: 0.8em;
-  display: flex;
-  float:right;
+  /*display: flex;
+  float:right;*/
   margin: auto;
   overflow: auto;
   height:100%;
@@ -49,7 +49,7 @@ header ul {
 
 
 header ul li{
-  display: inline-block;
+  /*display: inline-block;*/
   text-align: center;
   padding: 0;
   margin: auto;
@@ -72,12 +72,12 @@ header ul li:first-of-type:hover{
 header ul li:first-of-type::after{
   content: "•";
   color: lightgreen;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 header ul li:nth-last-of-type(2){
 border-left: black solid 0.3px;
-width:40%;
+/*width:40%;*/
 }
 
 header ul li:last-of-type{
@@ -89,7 +89,7 @@ header ul li:last-of-type{
 header img {
   border-radius: 50%;
   height: auto;
-  max-width: 60%;
+  /*max-width: 60%;*/
 }
 
 
@@ -107,6 +107,10 @@ nav li {
   margin: auto;
   width: 70%;
   padding: 1em;
+}
+
+#dashboard {
+  display:none;
 }
 
 
@@ -147,7 +151,7 @@ nav li {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 20px;
-  display: inline-block;
+  /*display: inline-block;*/
   text-align: left;
   font-size: 1em;
   color: #8d8d8d;
@@ -215,7 +219,7 @@ nav li {
 
 .selected-data li {
   list-style-type: none;
-  display: inline-block;
+  /*display: inline-block;*/
   margin: auto;
 }
 
@@ -262,12 +266,12 @@ nav li {
 
 .widget-container {
   border-top: solid rgba(224, 224, 224, .8) 1px;
-  display: flex;
+  /*display: flex;*/
 }
 
 .widgets {
-  width: 50%;
-  display: inline-block;
+  /*width: 50%;*/
+  /*display: inline-block;*/
 }
 
 
@@ -282,7 +286,7 @@ nav li {
 
 
 .social-media, .search_row, .members_activity, .message_settings {
-  display: flex;
+  /*display: flex;*/
 }
 
 
@@ -293,7 +297,7 @@ nav li {
 
 
 .media-box {
-  display: inline-block;
+  /*display: inline-block;*/
   border: solid rgba(224, 224, 224, .8) 1px;
   width: 30%;
   margin: 10px auto;
@@ -361,7 +365,7 @@ nav li {
   text-align: left;
   max-width: 15%;
   padding: 5px;
-  display: inline-block;
+  /*display: inline-block;*/
   margin: auto;
 }
 
@@ -371,16 +375,16 @@ nav li {
 }
 
 #new_members, #recent_activity {
-  display: inline-block;
-  width: 50%;
+  /*display: inline-block;*/
+  /*width: 50%;*/
   text-align: left;
   margin-left: 20px;
   vertical-align: top;
 }
 
 #new_members li, #recent_activity li{
-  display: inline-block;
-  flex-direction: column;
+  /*display: inline-block;*/
+  /*flex-direction: column;*/
   width: 100%;
   border-bottom: solid rgba(224, 224, 224, .8) 1px;
 }
@@ -403,15 +407,15 @@ nav li {
 }
 
  .name_email, .name_activity {
-  flex-direction: column;
-  display: inline-block;
+  /*flex-direction: column;*/
+  /*display: inline-block;*/
   vertical-align: top;
   margin-top: 20px;
   margin-left: 10px;
 }
 
 #new_members span:nth-last-of-type(1){
-  display: inline-block;
+  /*display: inline-block;*/
   vertical-align: top;
   width: 30%;
   margin-top: 40px;
@@ -516,7 +520,7 @@ nav li {
 }
 
 .setting_1, .setting_2 {
-  display: flex;
+  /*display: flex;*/
 }
 
 .setting_2 {
@@ -524,7 +528,7 @@ nav li {
 }
 
 .setting_1 p, .setting_2 p {
-  display: inline-block;
+  /*display: inline-block;*/
   padding-left: 15px;
 }
 
@@ -620,4 +624,99 @@ nav {
 
 main {
   background-color: white;
+}
+
+
+/* media queries */
+
+@media (min-width: 768px) {
+
+    header ul {
+      display: flex;
+      float:right;
+    }
+
+    .widget-container {
+      display: flex;
+    }
+
+    .social-media, .search_row, .members_activity, .message_settings {
+      display: flex;
+    }
+
+    #new_members li, #recent_activity li{
+      flex-direction: column;
+      display: inline-block;
+    }
+
+    .name_email, .name_activity {
+     flex-direction: column;
+     display: inline-block;
+   }
+
+   .setting_1, .setting_2 {
+     display: flex;
+   }
+
+   header ul li{
+     display: inline-block;
+
+   }
+
+   header ul li:first-of-type::after{
+     display: inline-block;
+   }
+
+   .search_row h3 {
+     display: inline-block;
+
+   }
+
+   .selected-data li {
+     display: inline-block;
+   }
+
+   .widgets {
+     display: inline-block;
+     width: 50%;
+   }
+
+   .media-box {
+     display: inline-block;
+   }
+
+   .members_activity img {
+     display: inline-block;
+   }
+
+   #new_members, #recent_activity {
+     display: inline-block;
+     width: 50%;
+   }
+
+
+  #new_members span:nth-last-of-type(1){
+    display: inline-block;
+  }
+
+  .setting_1 p, .setting_2 p {
+    display: inline-block;
+  }
+
+  header ul li:nth-last-of-type(2){
+  width:40%;
+  }
+
+  header img {
+    max-width: 60%;
+  }
+
+  #dashboard {
+    display:inline-block;
+  }
+
+}
+
+@media (min-width: 1050px) {
+
 }
