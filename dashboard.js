@@ -287,12 +287,44 @@ document.getElementById("search_btn").addEventListener("click", function(){
   console.log("button clicked");
 });
 
+document.getElementById("send_btn").addEventListener("click", function(){
+  window.alert("Thank you! Your message has been sent");
+});
 
-member_names =['Ana George',
-               'Rodrigo Carlos',
-               'Susan Simpson',
-               'John Blake'
+
+var member_names =['ana george',
+               'rodrigo carlos',
+               'susan simpson',
+               'john blake'
 ]
+
+var characters = [];
+
+function splitNames(arr) {
+  for (var i=0; i<= arr.length-1; i+=1) {
+    const memberCharacters = arr[i].split("");
+    characters.push(memberCharacters);
+  }
+}
+
+console.log(characters);
+
+  var splitCharacters = splitNames(member_names);
+
+console.log(splitCharacters);
+
+$( "#user_search" ).keyup(function() {
+  search = $('#user_search').val().toLowerCase();
+  console.log(search);
+  for (var i = 0; i <= member_names.length; i += 1 ){
+    if (search === (member_names[i])) {
+      console.log(member_names[i] + ' is a match')
+    } else {
+      console.log('no matches found')
+    }
+  };
+});
+
 
 /*
 var member = {
