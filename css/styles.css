@@ -38,6 +38,7 @@ header strong, main strong {
 }
 
 header ul {
+  font-size: 0.8em;
   display: flex;
   float:right;
   margin: auto;
