@@ -281,6 +281,8 @@ nav li {
   display: flex;
 }
 
+
+
 .social-stats {
   border-top: solid rgba(224, 224, 224, .8) 1px;
 }
@@ -359,10 +361,6 @@ nav li {
   margin: auto;
 }
 
-.members_activity a {
-  margin-left: 20px;
-  text-align: right;
-}
 
 .members_activity {
   border-top: solid rgba(224, 224, 224, .8) 1px;
@@ -373,6 +371,43 @@ nav li {
   width: 50%;
   text-align: left;
   margin-left: 20px;
+  vertical-align: top;
+}
+
+#new_members li, #recent_activity li{
+  display: inline-block;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: solid rgba(224, 224, 224, .8) 1px;
+}
+
+#new_members a {
+  color: #7577bf;
+}
+
+#recent_activity li:last-of-type, #new_members li:last-of-type {
+  margin-bottom: 10px;
+}
+
+#recent_activity li {
+  padding-bottom: 4px;
+}
+
+ .name_email, .name_activity {
+  flex-direction: column;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#new_members span:nth-last-of-type(1){
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-top: 40px;
+  float: right;
+  margin-right: 0;
 }
 
 
@@ -412,6 +447,8 @@ nav li {
   border-radius: 5px;
   padding: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 #save_btn {
@@ -420,7 +457,7 @@ nav li {
   color: white;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   margin-right: 25px;
 }
 
@@ -430,7 +467,7 @@ nav li {
   color: white;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .settings, #recent_activity {

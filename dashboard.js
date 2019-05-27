@@ -32,11 +32,6 @@ var chart1_1 = new Chart(ctx1_1, {
                     offsetGridLines:true,
                 }
             }]
-        },
-    responsive:true,
-    maintainAspectRatio: false,
-    gridlines: {
-       offsetGridLines: true,
    },
     legend: {
       display: false,
