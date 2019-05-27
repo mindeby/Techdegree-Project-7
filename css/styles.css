@@ -168,6 +168,7 @@ nav li {
 }
 
 #prompt {
+  height: 22px;
   color: black;
   font-weight: 200;
   border: none;
@@ -179,7 +180,6 @@ nav li {
 }
 
  .search_bar button {
-  max-width: inherit;
   background-color: white;
   margin: 0;
   padding-top: 2px;
