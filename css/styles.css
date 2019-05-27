@@ -157,6 +157,7 @@ nav li {
 }
 
 .search_bar {
+  vertical-align: top;
   background-color: #fbfbfb;
   height: 100%;
   width: 80%;
