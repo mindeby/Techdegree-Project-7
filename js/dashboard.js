@@ -318,17 +318,49 @@ document.getElementById("notifications_badge").addEventListener("click", functio
 });
 
 
-//SAVING SETTINGS
-
-
+//SAVING EMAIL SETTINGS
+var currentState = localStorage.getItem('on');
+console.log(currentState);
 
 document.getElementById("save_btn").addEventListener("click", function(){
   var on = document.getElementById('email_notifications').checked;
   var emailInput = document.getElementById('email_notifications');
   var state = localStorage.setItem('on',JSON.stringify(on));
-  var currentState = localStorage.getItem('on');
+  currentState = localStorage.getItem('on');
   console.log(currentState);
 });
+
+
+if (currentState == "true") {
+  console.log('currentState is true');
+  document.getElementById('email_notifications').checked = true;
+} else {
+  console.log('currentState is false');
+  document.getElementById('email_notifications').checked = false;
+}
+
+
+//SAVING PROFILE SETTINGS
+
+var currentState1 = localStorage.getItem('on1');
+
+document.getElementById("save_btn").addEventListener("click", function(){
+  var on1 = document.getElementById('profile_display').checked;
+  var profileInput = document.getElementById('profile_display');
+  var state1 = localStorage.setItem('on1',JSON.stringify(on1));
+  currentState1 = localStorage.getItem('on1');
+  console.log(currentState1);
+});
+
+
+if (currentState1 == "true") {
+  console.log('currentState is true');
+  document.getElementById('profile_display').checked = true;
+} else if (currentState1 == "false") {
+  console.log('currentState is false');
+  document.getElementById('profile_display').checked = false;
+}
+
 
 
 /*
