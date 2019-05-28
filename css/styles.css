@@ -460,7 +460,9 @@ nav li:first-of-type {
 }
 
 #recent_activity img {
-  display: none;
+  display: block;
+  float: left;
+  padding: 5px;
 }
 
  .name_email, .name_activity {
@@ -469,6 +471,7 @@ nav li:first-of-type {
   /*vertical-align: top;*/
   margin-top: 20px;
   margin-left: 0px;
+  line-height: 1.3em;
 }
 
 #new_members span:nth-last-of-type(1){
@@ -717,6 +720,7 @@ main {
      flex-direction: column;
      display: inline-block;
      vertical-align: top;
+     padding: 2px;
    }
 
    .setting_1, .setting_2 {
