@@ -318,6 +318,41 @@ document.getElementById("notifications_badge").addEventListener("click", functio
 });
 
 
+//SAVING SETTINGS
+
+
+
+document.getElementById("save_btn").addEventListener("click", function(){
+  var on = document.getElementById('email_notifications').checked;
+  var emailInput = document.getElementById('email_notifications');
+  var state = localStorage.setItem('on',JSON.stringify(on));
+  var currentState = localStorage.getItem('on');
+  console.log(currentState);
+});
+
+
+/*
+
+document.getElementById("save_btn").addEventListener("click", function(){
+  var switchedOn = localStorage.getItem('on');
+  console.log(switchedOn);
+
+  document.getElementById('email_notifications').checked = false;
+
+  if (swicthedOn = true) {
+    console.log('should be ON')
+    document.getElementById('email_notifications').checked = true;
+  }
+});
+
+document.getElementById("cancel_btn").addEventListener("click", function(){
+  var on = false;
+});
+
+*/
+
+
+
 /*
 var characters = [];
 

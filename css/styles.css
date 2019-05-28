@@ -857,7 +857,7 @@ main {
 
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1024px) {
   nav li:first-of-type {
     border-bottom: none;
 
