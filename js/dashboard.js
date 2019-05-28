@@ -324,7 +324,6 @@ console.log(currentState);
 
 document.getElementById("save_btn").addEventListener("click", function(){
   var on = document.getElementById('email_notifications').checked;
-  var emailInput = document.getElementById('email_notifications');
   var state = localStorage.setItem('on',JSON.stringify(on));
   currentState = localStorage.getItem('on');
   console.log(currentState);
@@ -346,7 +345,6 @@ var currentState1 = localStorage.getItem('on1');
 
 document.getElementById("save_btn").addEventListener("click", function(){
   var on1 = document.getElementById('profile_display').checked;
-  var profileInput = document.getElementById('profile_display');
   var state1 = localStorage.setItem('on1',JSON.stringify(on1));
   currentState1 = localStorage.getItem('on1');
   console.log(currentState1);
@@ -354,13 +352,38 @@ document.getElementById("save_btn").addEventListener("click", function(){
 
 
 if (currentState1 == "true") {
-  console.log('currentState is true');
   document.getElementById('profile_display').checked = true;
 } else if (currentState1 == "false") {
-  console.log('currentState is false');
   document.getElementById('profile_display').checked = false;
 }
 
+//SAVING TIMEZONE SETTINGS
+var currentOption = localStorage.getItem('option');
+
+document.getElementById("save_btn").addEventListener("click", function(){
+  var option = document.getElementById('timezone').selectedIndex;
+  var storedOption = localStorage.setItem('option',JSON.stringify(option));
+  currentOption = localStorage.getItem('option');
+});
+
+
+
+if (currentOption == "1") {
+  document.getElementById('timezone').selectedIndex = 1;
+} if (currentOption == "2") {
+  document.getElementById('timezone').selectedIndex = 2;
+} if (currentOption == "3") {
+  document.getElementById('timezone').selectedIndex = 3;
+}
+
+
+//RESET OPTIONS
+
+  document.getElementById("cancel_btn").addEventListener("click", function(){
+    document.getElementById('timezone').selectedIndex = 0;
+    document.getElementById('profile_display').checked = false;
+    document.getElementById('email_notifications').checked = false;
+  });
 
 
 /*
