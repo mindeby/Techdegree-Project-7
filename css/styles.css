@@ -516,6 +516,10 @@ nav li:first-of-type {
   min-height: 150px;
 }
 
+.time_zones select {
+  width: 100%;
+}
+
 
 #send_btn {
   width: 100%;
@@ -766,8 +770,8 @@ main {
     display: inline-block;
     margin: auto;
     width: auto;
-    padding: 5px;
     padding-top: 10px;
+    padding-bottom: 4px;
     vertical-align: middle;
   }
 
