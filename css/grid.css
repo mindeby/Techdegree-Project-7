@@ -1,6 +1,4 @@
 
-
-
 .container {
   height: 100%;
   width: 95%;
@@ -9,10 +7,36 @@
 }
 
 
-
-
-
 @media (min-width: 768px) {
+  .container {
+
+    display: grid;
+    grid-template-columns: minmax(450px, auto) minmax(450px, auto);
+    grid-template-rows: 70px 50px minmax(150px, auto) 100px;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "main main";
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+  }
+}
+
+
+
+
+@media (min-width: 1050px) {
   .container {
 
     display: grid;

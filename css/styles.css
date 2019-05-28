@@ -27,6 +27,10 @@ header h1 {
   transform: translateY(-50%);
 }
 
+header {
+  max-height: 100px;
+}
+
 header h3  {
   display: none;
 }
@@ -93,20 +97,21 @@ header ul li:last-of-type{
 
 header img {
   float: right;
-  margin: auto;
   border-radius: 50%;
   height: auto;
-  max-width: 18%;
-  max-height: 100%;
+  max-height: 40px;
   padding: 2px;
-  position: absolute;
-  margin-left: 40px;
+  margin-left: 50px;
   /*max-width: 60%;*/
 }
 
 
 
 /*Nav styles*/
+
+nav {
+  max-height: 90px;
+}
 
 nav ul {
   margin: 0;
@@ -692,7 +697,6 @@ main {
 
    header ul li{
      display: inline-block;
-
    }
 
    header ul li:first-of-type::after{
@@ -757,9 +761,22 @@ main {
     display:inline-block;
   }
 
+
   nav li {
-    display: block;
-    width: 70%;
+    display: inline-block;
+    margin: auto;
+    width: auto;
+    padding: 5px;
+    padding-top: 10px;
+    vertical-align: middle;
+  }
+
+  nav svg {
+    height: 30px;
+  }
+
+  nav ul {
+    height: 100%;
   }
 
   .search_bar {
@@ -781,10 +798,6 @@ main {
     display: inline-block;
   }
 
-  nav li:first-of-type {
-    border-bottom: none;
-
-  }
 
   .search_bar {
     width: 80%;
@@ -809,9 +822,22 @@ main {
     width: 46%;
   }
 
+  nav {
+    max-height: 100%;
+  }
+
 
 }
 
 @media (min-width: 1050px) {
+  nav li:first-of-type {
+    border-bottom: none;
+
+  }
+
+  nav li {
+    display: block;
+    width: 70%;
+  }
 
 }
