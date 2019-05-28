@@ -78,11 +78,12 @@ header ul li:first-of-type:hover{
   transform: scale(1.1) translate(-10px);
 }
 
-header ul li:first-of-type::after{
+.content_maker::after {
   content: "•";
   color: lightgreen;
   /*display: inline-block;*/
 }
+
 
 header ul li:nth-last-of-type(2){
 /*border-left: black solid 0.3px;*/
@@ -105,7 +106,30 @@ header img {
   /*max-width: 60%;*/
 }
 
+#myDropdown {
+  display: none;
+  z-index: 1;
+  overflow: auto;
+  position: absolute;
+  margin-top: 0px;
+  width: 100%;
+}
 
+
+
+#myDropdown p {
+  font-size: 1.2em;
+  background-color: #babbdf;
+  border: solid black 1px;
+  border-radius: 5px;
+  min-height: 30px;
+  padding: 10px;
+}
+
+#myDropdown span {
+  float: right;
+  margin: auto 10px auto;
+}
 
 /*Nav styles*/
 

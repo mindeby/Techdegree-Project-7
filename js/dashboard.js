@@ -302,6 +302,21 @@ var member_names = {
 $("#user_search").easyAutocomplete(member_names);
 
 
+document.getElementById("send_btn").addEventListener("click", function(){
+  if (member_names.data.indexOf($("#user_search").val()) !== -1 &&  $("#user_message").val() !== '') {
+  window.alert("Thank you! Your message has been sent");
+  } else {
+  window.alert("Sorry, please check if a user has been selected and if the message field is not empty");
+  }
+});
+
+
+document.getElementById("notifications_badge").addEventListener("click", function(){
+  console.log('button clicked');
+  myDropdown.style.display = "block";
+  notifications_badge.classList.remove("content_maker");
+});
+
 
 /*
 var characters = [];
