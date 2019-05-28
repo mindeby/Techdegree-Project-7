@@ -282,22 +282,28 @@ document.getElementById("monthly").addEventListener("click", function(){
 
 
 
-
 document.getElementById("search_btn").addEventListener("click", function(){
   console.log("button clicked");
 });
 
-document.getElementById("send_btn").addEventListener("click", function(){
-  window.alert("Thank you! Your message has been sent");
-});
 
 
-var member_names =['ana george',
-               'rodrigo carlos',
-               'susan simpson',
-               'john blake'
-]
+var member_names = {
 
+  data:             ['ana george',
+                    'rodrigo carlos',
+                    'susan simpson',
+                    'john blake'
+                    ]
+};
+
+
+
+$("#user_search").easyAutocomplete(member_names);
+
+
+
+/*
 var characters = [];
 
 function splitNames(arr) {
@@ -316,14 +322,23 @@ console.log(splitCharacters);
 $( "#user_search" ).keyup(function() {
   search = $('#user_search').val().toLowerCase();
   console.log(search);
-  for (var i = 0; i <= member_names.length; i += 1 ){
-    if (search === (member_names[i])) {
-      console.log(member_names[i] + ' is a match')
+  for (var i = 0; i <= member_names.length-1; i += 1 ){
+    if (search === (member_names[i][0])) {
+      $( "#user_search" ).val((member_names[i]));
+      console.log(member_names[i] + ' is a match');
+      document.getElementById("send_btn").addEventListener("click", function(){
+        window.alert("Thank you! Your message has been sent");
+      });
     } else {
-      console.log('no matches found')
+      console.log('no matches found');
     }
   };
 });
+
+
+*/
+
+
 
 
 /*
