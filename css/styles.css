@@ -825,7 +825,6 @@ main {
 
   header ul li:first-of-type{
     float:none;
-    padding:auto;
     border-left: black solid 0.3px;
   }
 
