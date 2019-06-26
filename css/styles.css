@@ -50,7 +50,6 @@ header ul {
   /*display: flex;
   float:right;*/
   margin: auto;
-  overflow: auto;
   height:100%;
   vertical-align:middle;
 }
@@ -78,9 +77,17 @@ header ul li:first-of-type:hover{
   transform: scale(1.1) translate(-10px);
 }
 
+
+.notifications_badge{
+  position: relative;
+}
+
 .content_maker::after {
   content: "•";
   color: lightgreen;
+  position: absolute;
+  top:0;
+  right: 1;
   /*display: inline-block;*/
 }
 
