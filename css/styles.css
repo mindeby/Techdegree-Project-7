@@ -426,7 +426,7 @@ nav li:first-of-type {
 .members_activity img {
   border-radius: 50%;
   text-align: left;
-  max-width: 15%;
+  max-width: 65px;
   padding: 5px;
   /*display: inline-block;*/
   margin: auto;
@@ -443,6 +443,7 @@ nav li:first-of-type {
   text-align: left;
   /*margin-left: 20px;*/
   vertical-align: top;
+
 }
 
 #new_members li, #recent_activity li{
@@ -450,7 +451,12 @@ nav li:first-of-type {
   /*flex-direction: column;*/
   width: 100%;
   border-bottom: solid rgba(224, 224, 224, .8) 1px;
+    min-height: 80px;
 }
+
+
+
+
 
 #new_members a {
   color: #7577bf;
@@ -465,9 +471,7 @@ nav li:first-of-type {
   margin-bottom: 10px;
 }
 
-#recent_activity li {
-  padding-bottom: 4px;
-}
+
 
 #recent_activity img {
   display: block;
@@ -479,7 +483,6 @@ nav li:first-of-type {
   /*flex-direction: column;*/
   /*display: inline-block;*/
   /*vertical-align: top;*/
-  margin-top: 20px;
   margin-left: 0px;
   line-height: 1.3em;
 }
@@ -542,6 +545,7 @@ nav li:first-of-type {
 #user_search, #user_message, .time_zones {
   background-color: #fbfbfb;
   width: 100%;
+  max-width: 100%;
   margin: auto;
   padding: 5px;
   margin-bottom: 0;
@@ -846,7 +850,8 @@ main {
 
 
   .search_bar {
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .settings, #recent_activity {
