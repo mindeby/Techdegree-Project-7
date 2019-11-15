@@ -270,11 +270,11 @@ document.getElementById("monthly").addEventListener("click", function(){
 
 //ALERT MESSAGE ON LOAD
 
-  const message = document.getElementById('message');
+  const message$ = $('#message');
 
 
   function alertMessage() {
-    message.style.display = "block";
+    message$.slideDown(1000);
   }
 
 
@@ -313,7 +313,7 @@ document.getElementById("send_btn").addEventListener("click", function(){
 
 document.getElementById("notifications_badge").addEventListener("click", function(){
   console.log('button clicked');
-  myDropdown.style.display = "block";
+  $('#myDropdown').slideDown(1500);
   notifications_badge.classList.remove("content_maker");
 });
 

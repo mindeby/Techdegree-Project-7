@@ -46,7 +46,6 @@ header strong, main strong {
 }
 
 header ul {
-  font-size: 0.8em;
   /*display: flex;
   float:right;*/
   margin: auto;
@@ -74,12 +73,7 @@ header ul li:first-of-type{
 
 header ul li:first-of-type:hover{
   opacity: 1;
-  transform: scale(1.1) translate(-10px);
-}
-
-
-.notifications_badge{
-  position: relative;
+  transform: scale(1.1);
 }
 
 .content_maker::after {
@@ -87,7 +81,6 @@ header ul li:first-of-type:hover{
   color: lightgreen;
   position: absolute;
   top:0;
-  right: 1;
   /*display: inline-block;*/
 }
 
@@ -106,7 +99,7 @@ header ul li:last-of-type{
 header img {
   float: right;
   border-radius: 50%;
-  max-height: 40px;
+  max-height: 60px;
   padding: 2px;
   margin-left: 50px;
   /*max-width: 60%;*/
@@ -124,12 +117,16 @@ header img {
 
 
 #myDropdown p {
-  font-size: 1.2em;
+  font-size: 1em;
+  color: #3D4043;
   background-color: #babbdf;
-  border: solid black 1px;
+  border: solid #7273A8 1px;
   border-radius: 5px;
   min-height: 30px;
-  padding: 10px;
+  padding: 5px;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 #myDropdown span {
@@ -159,7 +156,7 @@ nav li {
   margin: 10px;
 }
 
-nav svg {
+svg {
   max-height: 30px;
 }
 
@@ -717,6 +714,11 @@ main {
       float:right;
     }
 
+    .content_maker::after {
+      height: 30px;
+      width: 30px;
+    }
+
     .widget-container {
       display: flex;
     }
@@ -795,7 +797,6 @@ main {
   }
 
   header img {
-    max-width: 60%;
     margin-top: auto;
     margin-left: auto;
     float: none;
